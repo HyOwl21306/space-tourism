@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-Barlow: "Barlow Semi Condensed", sans-serif;
+
+    --animate-wiggle: wiggle 1.5s ease-in-out infinite;
+    @keyframes wiggle {
+        0%, 100% {
+        transform: scale(1);
+        }
+        50% {
+        transform: scale(1.1);
+        }
+    }
+}
+
+@layer {
+    .home-bg {
+        @apply bg-cover bg-center bg-no-repeat bg-[url(../assets/home/background-home-mobile.jpg)]
+        md:bg-[url(../assets/home/background-home-tablet.jpg)]
+        lg:bg-[url(../assets/home/background-home-desktop.jpg)]
+    }
+    .crew-bg {
+        @apply bg-cover bg-center bg-no-repeat bg-[url(../assets/crew/background-crew-mobile.jpg)]
+        md:bg-[url(../assets/crew/background-crew-tablet.jpg)]
+        lg:bg-[url(../assets/crew/background-crew-desktop.jpg)]
+    }
+    .destination-bg {
+        @apply bg-cover bg-center bg-no-repeat bg-[url(../assets/destination/background-destination-mobile.jpg)]
+        md:bg-[url(../assets/destination/background-destination-tablet.jpg)]
+        lg:bg-[url(../assets/destination/background-destination-desktop.jpg)]
+    }
+    .technology-bg {
+        @apply bg-cover bg-center bg-no-repeat bg-[url(../assets/technology/background-technology-mobile.jpg)]
+        md:bg-[url(../assets/technology/background-technology-tablet.jpg)]
+        lg:bg-[url(../assets/technology/background-technology-desktop.jpg)]
+    }
+
+    .custom-text {
+        @apply font-light tracking-widest font-Barlow
+    }
+
+    .tabBtn {
+        @apply tracking-widest font-Barlow text-white font-medium text-[12px] cursor-pointer delay-100
+        md:text-lg
+        lg:text-sm
+    }
+
+    h2 {
+        @apply tracking-widest font-Barlow text-white font-medium text-[12px] pb-3
+        md:text-2xl md:pb-6
+        lg:text-sm lg:pb-3
+    }
+
+    .select {
+        @apply border-b-2 animate-bounce
+    }
+
+    .tabCir {
+        @apply rounded-full size-2 lg:size-3 cursor-pointer
+    }
+
+    .tabTech {
+        @apply border-2 border-white/50 rounded-full cursor-pointer size-9 
+        text-center font-Barlow 
+        flex justify-center items-center 
+        lg:size-20 lg:text-2xl
+    }
+}
+
